@@ -55,10 +55,10 @@ const CalendarComponent = ({ parqueaderoId }) => {
         parqueaderoId: parqueaderoId
       };
 
-      const response = await axios.post('https://parqueaderorolesback.onrender.com/api/reserva', reservationData);
+      const response = await axios.post('http://localhost:5000/api/reserva', reservationData);
       console.log('Reserva creada:', response.data);
       showSuccessAlert();
-      navigate("/reservas");
+      navigate("/reservasUser");
     } catch (error) {
       console.error('Error creating reservation:', error);
       const errorMessage = error.response && error.response.data ? error.response.data.message : 'Error al crear la reserva. Por favor, inténtalo de nuevo más tarde.';

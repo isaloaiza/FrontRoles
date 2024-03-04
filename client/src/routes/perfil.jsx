@@ -74,6 +74,7 @@ function MiComponente() {
     <div className='perfil'>
       <PortalLayout>
         <PerfilFormulario />
+        <Footer />
       </PortalLayout>
     </div>
   );

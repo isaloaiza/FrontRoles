@@ -8,7 +8,7 @@ import Footer from "../components/Footer";
 
 
 
-const Reservas = () => {
+const ReservasUser = () => {
   const navigate = useNavigate();
   const [reservas, setReservas] = useState([]);
 
@@ -36,14 +36,8 @@ const Reservas = () => {
 
   };
 
-  let codigoPais = '57'; // Código de país
+  
     
-    const handleWhatsAppClick = (numeroTelefono, nombre) => {
-      const mensajeInicial = encodeURIComponent(`¡Hola ${nombre}!, recuerda que tienes una reserva en nuestro parqueadero, para mas información comunícate con este número.`);
-      const numeroWhatsApp = `${codigoPais}${numeroTelefono}`;
-      const urlWhatsApp = `https://wa.me/${numeroWhatsApp}?text=${mensajeInicial}`;
-      window.open(urlWhatsApp, '_blank');
-    }
 
   return (
     <PortalLayout>
@@ -63,7 +57,7 @@ const Reservas = () => {
             <th>Numero</th>
             <th>Placa</th>
             <th>Eliminar</th>
-            <th>Enviar mensaje</th>
+         
            
           </tr>
         </thead>
@@ -88,9 +82,7 @@ const Reservas = () => {
                   cancelar reserva
                 </button>
               </td>
-              <td>
-              <Link onClick={() => handleWhatsAppClick(reserva.telefono, reserva.nombre)}> <img src="https://cdn.icon-icons.com/icons2/1571/PNG/512/1024881-whatsapp_107716.png" alt="" className="whatsapp" /></Link>
-              </td>
+             
             </tr>
           ))}
         </tbody>
@@ -103,4 +95,4 @@ const Reservas = () => {
   );
 };
 
-export default Reservas;
+export default ReservasUser;

@@ -956,6 +956,88 @@ margin-left: 100px;
   text-decoration: underline;
 }
 
+/* explicacion.css */
+
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+h1 {
+  font-size: 24px;
+  color: #333;
+}
+
+ol {
+  list-style-type: none;
+  counter-reset: step-counter;
+}
+
+.explicacion-container .steps-container li {
+  counter-increment: step-counter;
+  margin-bottom: 10px;
+}
+
+.explicacion-container .steps-container li:before {
+  content: counter(step-counter);
+  background-color: #007bff;
+  color: #fff;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 10px;
+}
+
+.explicacion-container .steps-container a {
+  color: #007bff; /* Estilo para los enlaces dentro de .steps-container */
+  text-decoration: none;
+}
+
+.explicacion-container .steps-container a:hover {
+  text-decoration: underline;
+}
+
+button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+/* Estilos para la estructura de la explicación */
+
+.explicacion-container {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+}
+
+.steps-container {
+  flex: 1; /* Toma el espacio restante */
+  margin-left: 100px;
+}
+
+.image-container {
+  margin-left: 5px; /* Reduce el espacio entre los pasos y la imagen */
+}
+
+.image-container img {
+  width: 400px; /* Ajusta el tamaño de la imagen según sea necesario */
+  display: block; /* Para que la imagen no tenga espacio adicional debajo */
+ 
+}
+
 
 
 

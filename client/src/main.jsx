@@ -9,13 +9,16 @@ import { AuthProvider } from '../src/Autenticacion/AutProvider';
 import Home from '../src/components/Home';
 import Perfil from '../src/routes/perfil';
 import ContactUs from '../src/routes/contactUs';
-
 import Post from './pages/ParqueaderoF/ParqueaderoForm';
 import Posts from './pages/DatosFrom/DatosForm';//./pages/posts/Posts
-
 import PostInfo from './pages/DatosFrom/PostsInfo';//./pages/posts/PostsInfo
-
 import Reservas from '../src/routes/Reservas';//./routes/Reservas
+import ReservasUser from '../src/routes/reservasUser';
+import Explicacion from '../src/routes/Explicacion';
+
+
+
+
 
 
 
@@ -30,7 +33,8 @@ const App = () => {
           <Route path="/post/:id" element={<Post />} />
           <Route path="/post/:id/info" element={<PostInfo />} />
           <Route path="/reservas" element={<Reservas />} />
-        
+          <Route path="/reservasUser" element={<ReservasUser />} />
+          <Route path="/Explicacion" element={<Explicacion />} />
           <Route path="/" element={<Home />} />
           <Route path="/perfil" element={<Perfil />} />
           <Route path="/contactUs" element={<ContactUs />} />
