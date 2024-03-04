@@ -14,7 +14,7 @@ const Reservas = () => {
 
   const fetchReservas = async () => {
     try {
-      const res = await axios.get("http://localhost:5000/api/reserva");
+      const res = await axios.get("https://parqueaderorolesback.onrender.com/api/reserva");
       setReservas(res.data);
     } catch (error) {
       console.error("Error fetching reservas:", error);
@@ -27,7 +27,7 @@ const Reservas = () => {
 
   const handleDelete = async (reservaId) => {
     try {
-      await axios.delete(`http://localhost:5000/api/reserva/${reservaId}`);
+      await axios.delete(`https://parqueaderorolesback.onrender.com/reserva/${reservaId}`);
       // Actualizar la lista de reservas después de la eliminación
       fetchReservas();
     } catch (error) {
